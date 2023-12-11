@@ -1,0 +1,37 @@
+pipeline:
+  name: demo-1
+  identifier: demo1
+  projectIdentifier: demo
+  orgIdentifier: default
+  tags: {}
+  trigger:
+    branches:
+      - main
+  stages:
+    - name: Clone
+      jobs:
+        - name: CloneRepo
+          steps:
+            - checkout: self
+    - name: BuildAndTest
+      jobs:
+        - name: Build
+          steps:
+            - script:
+                name: Build
+                code: |
+                  # Add commands to build your project
+        - name: Test
+          steps:
+            - script:
+                name: Test
+                code: |
+                  # Add commands to run tests
+    - name: Deploy
+      jobs:
+        - name: Deploy
+          steps:
+            - script:
+                name: Deploy
+                code: |
+                  # Add commands to deploy your application
