@@ -12,7 +12,11 @@ pipeline:
       jobs:
         - name: YourFirstJob
           steps:
-            - script:
-                name: YourScript
-                code: |
-                  # Add your commands here
+            - type: Run
+              identifier: build_go_app
+              name: Build Go App
+              spec:
+                command: |-
+                  echo "Welcome to Harness CI"
+                  go build
+                  go test check syntax
