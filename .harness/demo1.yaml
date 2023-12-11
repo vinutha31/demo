@@ -16,11 +16,3 @@ pipeline:
                 name: YourScript
                 code: |
                   # Add your commands here
-    - name: YourSecondStage
-      jobs:
-        - name: YourSecondJob
-          steps:
-            - script:
-                name: YourScript
-                code: |
-                  # Add your commands here
