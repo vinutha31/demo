@@ -8,30 +8,19 @@ pipeline:
     branches:
       - main
   stages:
-    - name: Clone
+    - name: YourFirstStage
       jobs:
-        - name: CloneRepo
-          steps:
-            - checkout: self
-    - name: BuildAndTest
-      jobs:
-        - name: Build
+        - name: YourFirstJob
           steps:
             - script:
-                name: Build
+                name: YourScript
                 code: |
-                  # Add commands to build your project
-        - name: Test
-          steps:
-            - script:
-                name: Test
-                code: |
-                  # Add commands to run tests
-    - name: Deploy
+                  # Add your commands here
+    - name: YourSecondStage
       jobs:
-        - name: Deploy
+        - name: YourSecondJob
           steps:
             - script:
-                name: Deploy
+                name: YourScript
                 code: |
-                  # Add commands to deploy your application
+                  # Add your commands here
