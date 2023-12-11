@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_vinutha31_demo_1702273582631-pr-trigger-input-set
+  identifier: Build_vinutha31_demo_1702273582631prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_vinutha31_demo_1702273582631
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
