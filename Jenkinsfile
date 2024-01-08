@@ -5,8 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    // Use the credentials for Git checkout
-                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/QuickpropTechnologies/qptrader.git']]])
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/vinutha31/demo.git']]])
                 }
             }
         }
@@ -19,4 +18,3 @@ pipeline {
         }
     }
 }
-
